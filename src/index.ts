@@ -1,30 +1,13 @@
-//import { fromEvent } from 'rxjs'
-//Forma facil, pero vieja
-//document.addEventListener('click',()=>console.log('clicked'));
-//Forma dificil, pero cool
-//const event$ = fromEvent(document, 'click')
-//Las dos lineas son lo mismo
-//event$.subscribe(informacionEvento=>console.log(informacionEvento))
-//event$.subscribe(console.log)
-import { Observable } from 'rxjs';
+import { of, Observer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-//const obs$= Observable.create();
-const obs$= new Observable(subs=>{
-    subs.next('Hola');
-    subs.next('Mundo');
+const observer:Observer<any>={
+    next: valor=> console.log('next:',valor),
+    error: error=>console.warn('error', error), 
+    complete: ()=>console.log('Complete!')
+}
+//const obs$ = of([1,2],{a:1, b:2},function(){},true);
+const obs$ = of(...[1,2,3,4,5,6,7,8,9,10]).pipe(map(x => x * 5))
 
+obs$.subscribe(observer)
 
-    //Forzar un error
-    const a:any = undefined;
-    a.nombre="MG"
-
-    subs.complete();
-})
-
-obs$.subscribe(
-    valor=> console.log('next:',valor),
-    (error)=>console.warn('error', error), 
-    ()=>console.log('Complete!')
-    
-    
-)
