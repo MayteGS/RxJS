@@ -1,0 +1,21 @@
+{
+    "name": "RXJSCodellege",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "rxjs": "^6.5.3",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.3",
+        "webpack": "^4.41.3",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open --port=8081"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
