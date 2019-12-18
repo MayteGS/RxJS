@@ -28,6 +28,6 @@ button {
     top: 0;
     left: 0;
     height: 5px;
-    width: 50%;
-    background: darkturquoise;
+    width: 0%;
+    background: rgb(30, 218, 192);
 }
