@@ -22,3 +22,12 @@ button {
     font-size: 10px;
     border-radius: 10px;
 }
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 50%;
+    background: darkturquoise;
+}
